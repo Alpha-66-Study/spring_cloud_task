@@ -1,0 +1,32 @@
+server:
+  port: 9009
+
+spring:
+  application:
+    name: demo
+  profiles:
+    active: dev
+  jpa:
+    open-in-view: false
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+        globally_quoted_identifiers: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: false
+    enabled: false
+
+ipLimit: 120
